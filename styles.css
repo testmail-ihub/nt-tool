@@ -1,41 +1,19 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-}
-
-header {
-    background-color: #6200ea;
+#addNoteButton {
+    background-color: #4CAF50;
     color: white;
-    padding: 1rem;
-    text-align: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-main {
-    padding: 1rem;
+#addNoteButton:hover {
+    background-color: #45a049;
 }
 
-#search {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
+#noteColorPicker {
+    margin-top: 10px;
+    padding: 5px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#notes-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #6200ea;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    border-radius: 5px;
 }
