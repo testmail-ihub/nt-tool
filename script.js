@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const notesContainer = document.getElementById('notes-container');
     const addNoteButton = document.getElementById('addNoteButton');
     const noteColorPicker = document.getElementById('noteColorPicker');
+    const noteTextInput = document.getElementById('noteText');
 
     const notes = [
         { id: 1, content: 'First note', color: '#ffffff' },
@@ -31,13 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     addNoteButton.addEventListener('click', () => {
-        const newNote = {
-            id: notes.length + 1,
-            content: `New Note ${notes.length + 1}`,
-            color: noteColorPicker.value
-        };
-        notes.push(newNote);
-        renderNotes(notes);
+        const noteText = noteTextInput.value.trim();
+        if (noteText) {
+            const newNote = {
+                id: notes.length + 1,
+                content: noteText,
+                color: noteColorPicker.value
+            };
+            notes.push(newNote);
+            renderNotes(notes);
+            noteTextInput.value = ''; // Clear the input field after adding the note
+        } else {
+            alert('Please enter a note before adding.');
+        }
     });
 
     renderNotes(notes);
