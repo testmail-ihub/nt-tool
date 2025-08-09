@@ -1,6 +1,6 @@
-,{
+document.getElementById('add-note').addEventListener('click', (event) => {
     event.preventDefault();
-    const noteText = newNoteInput.value.trim();
+    const noteText = document.getElementById('new-note-input').value.trim();
     if (noteText !== '') {
         const noteElement = document.createElement('div');
         noteElement.classList.add('note');
@@ -22,11 +22,11 @@
         const deleteButton = document.createElement('button');
         deleteButton.innerText = 'Delete';
         deleteButton.addEventListener('click', () => {
-            notesContainer.removeChild(noteElement);
+            document.getElementById('notes-container').removeChild(noteElement);
         });
         noteElement.appendChild(deleteButton);
 
-        notesContainer.appendChild(noteElement);
-        newNoteInput.value = '';
+        document.getElementById('notes-container').appendChild(noteElement);
+        document.getElementById('new-note-input').value = '';
     }
 });
