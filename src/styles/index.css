@@ -23,3 +23,53 @@ body {
 .note-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Styles for pinned notes */
+.pinned-note {
+  border: 2px solid #ffcc00;
+  background-color: #fffbea;
+}
+
+.pinned-note .pin-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.pinned-note .pin-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Color coding */
+.note-yellow {
+  background-color: #fff9c4;
+}
+
+.note-blue {
+  background-color: #bbdefb;
+}
+
+.note-pink {
+  background-color: #f8bbd0;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .note-card {
+    padding: 12px;
+  }
+}
+
+/* Hover and focus effects */
+button:hover, .note-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+button:focus {
+  outline: 2px solid #007bff;
+}
