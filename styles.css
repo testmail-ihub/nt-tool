@@ -1,19 +1,22 @@
+/* ServiceNow Theme */
 #addNoteButton {
-    background-color: #4CAF50;
+    background-color: #0072C6;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Arial', sans-serif;
 }
 
 #addNoteButton:hover {
-    background-color: #45a049;
+    background-color: #005A9E;
 }
 
 #noteColorPicker {
     margin-top: 10px;
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #d1d1d1;
     border-radius: 5px;
+    font-family: 'Arial', sans-serif;
 }
