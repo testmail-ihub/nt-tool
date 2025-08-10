@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note-Taking App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Note-Taking App</h1>
+        <input type="search" id="search-bar" placeholder="Search notes...">
+        <button id="new-note-btn">New Note</button>
+    </header>
+    <main>
+        <section id="pinned-notes">
+            <h2>Pinned Notes</h2>
+            <div class="note-grid"></div>
+        </section>
+        <section id="all-notes">
+            <h2>All Notes</h2>
+            <div class="note-grid"></div>
+        </section>
+    </main>
+    <aside id="color-labels">
+        <h2>Color Labels</h2>
+        <button class="color-label yellow"></button>
+        <button class="color-label green"></button>
+        <button class="color-label blue"></button>
+        <button class="color-label pink"></button>
+    </aside>
+    <script src="script.js"></script>
+</body>
+</html>
