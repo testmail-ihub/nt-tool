@@ -16,7 +16,7 @@ function createNoteElement(note) {
 
     const noteFront = document.createElement("div");
     noteFront.classList.add("note-front");
-    noteFront.style.borderColor = note.color;
+    noteFront.style.backgroundColor = note.color;
 
     const noteTitle = document.createElement("h3");
     noteTitle.contentEditable = true;
@@ -89,11 +89,12 @@ function renderNotes() {
 }
 
 function createNewNote() {
+    const selectedColor = document.querySelector(".color-label.selected")?.classList[1] || noteColors[0];
     const newNote = {
         id: Date.now(),
         title: "",
         content: "",
-        color: noteColors[0],
+        color: selectedColor,
         pinned: false,
     };
 
