@@ -9,14 +9,25 @@
 <body>
     <header>
         <h1>Note-Taking Web Application</h1>
+        <input type="text" id="note-input" placeholder="Enter a new note">
+        <button id="add-note-btn">Add Note</button>
     </header>
     <main>
         <section class="note-grid">
             <!-- Notes will be displayed here -->
+            <div class="note" id="note-1">
+                <p contenteditable="true">Note 1 content</p>
+                <button class="delete-note-btn">Delete</button>
+            </div>
+            <div class="note" id="note-2">
+                <p contenteditable="true">Note 2 content</p>
+                <button class="delete-note-btn">Delete</button>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Note-Taking Web Application</p>
     </footer>
+    <script src="app.js"></script>
 </body>
 </html>
