@@ -9,28 +9,45 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
+            background-color: #f4f4f4; /* ServiceNow light gray background */
         }
         .counter {
             font-size: 48px;
             margin-bottom: 20px;
+            color: #005cbf; /* ServiceNow blue */
         }
         button {
             padding: 10px 20px;
             font-size: 18px;
             margin: 5px;
             cursor: pointer;
+            background-color: #005cbf; /* ServiceNow blue */
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #003d80; /* Darker ServiceNow blue */
         }
         button:disabled {
             opacity: 0.5;
             cursor: not-allowed;
         }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
     </style>
 </head>
 <body>
-    <div class="counter" id="counterDisplay">0</div>
-    <button id="decrementBtn" aria-label="Decrement counter">-</button>
-    <button id="incrementBtn" aria-label="Increment counter">+</button>
-
+    <div class="container">
+        <div class="counter" id="counterDisplay">0</div>
+        <button id="decrementBtn" aria-label="Decrement counter">-</button>
+        <button id="incrementBtn" aria-label="Increment counter">+</button>
+    </div>
     <script>
         const counterDisplay = document.getElementById('counterDisplay');
         const decrementBtn = document.getElementById('decrementBtn');
