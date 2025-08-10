@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7fa;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.note-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.note {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.note:hover {
+  transform: scale(1.05);
+}
+
+.note h2 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.note p {
+  font-size: 14px;
+  color: #555;
+}
+
+.note.red {
+  background-color: #ffcccb;
+}
+
+.note.blue {
+  background-color: #cce5ff;
+}
+
+.note.yellow {
+  background-color: #fff9c4;
+}
+
+.note.green {
+  background-color: #c6f4d6;
+}
+
+.note.purple {
+  background-color: #e1c9fb;
+}
+
+.note.orange {
+  background-color: #ffd8b8;
+}
+
+.note.grey {
+  background-color: #e5e5e5;
+}
+
+@media (max-width: 768px) {
+  .note-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .note-container {
+    grid-template-columns: 1fr;
+  }
+}
